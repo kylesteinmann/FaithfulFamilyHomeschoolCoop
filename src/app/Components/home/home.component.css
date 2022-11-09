@@ -1,0 +1,33 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.welcomeContainer {
+  background-image: url("/assets/kidsPlayingWelcomeScreen.jpg");
+  background-size: cover;
+  width: 100vw;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.messageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  color:white;
+  }
+
+h1{
+  font-size: 70px;
+  padding: 10px;
+}
+
+p{
+  font-size: medium;
+}
