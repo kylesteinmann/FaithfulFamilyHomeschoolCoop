@@ -4,12 +4,14 @@ mat-toolbar{
   justify-content:space-between;
   align-items: center;
   padding:50px 20px 50px 20px;
+  width: 100%;
 }
 .headerButtons {
   display: flex;
 
 }
 button{
+  display:flex;
   background-color:transparent;
   border: none;
   font-size:larger;

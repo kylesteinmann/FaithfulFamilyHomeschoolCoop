@@ -1,0 +1,34 @@
+table {
+  width: 100%;
+  max-width: 450px;
+  min-width: 400px;
+
+}
+h1 {
+  padding: 0;
+  margin: 0;
+  padding: 10px;
+  font-size: xx-large;
+}
+.eventsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 70px;
+}
+th{
+  background-color: turquoise;
+  color: white;
+  font-size: x-large;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.classesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 70px;
+}

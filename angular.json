@@ -95,6 +95,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "FaithfulFamilyHomeschoolCoop:build:production",
+            "firebaseProject": "faith-family-homeschool-co-op",
+            "firebaseHostingSite": "ffhc"
+          }
         }
       }
     }

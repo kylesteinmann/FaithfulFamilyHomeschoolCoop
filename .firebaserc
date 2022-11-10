@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "faith-family-homeschool-co-op": {
+      "hosting": {
+        "FaithfulFamilyHomeschoolCoop": [
+          "ffhc"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "faith-family-homeschool-co-op"
+  }
+}
