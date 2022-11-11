@@ -1,13 +1,47 @@
 <button (click)="eventFormVisible = !eventFormVisible">Edit Event</button>
 
-<form
-  #eventForm="ngForm"
-  (ngSubmit)="onSubmitEvent(eventForm)"
-  *ngIf="eventFormVisible"
->
-  <label for="date">Date</label>
-  <input mat-input type="text" value="date" name="date" ngModel />
-  <label for="event">Event Title</label>
-  <input mat-inputtype="text" value="event" name="event" ngModel />
-  <button type="submit" [disabled]="!eventForm.valid">Submit</button>
-</form>
+<div class="eventUpdator" *ngIf="eventFormVisible">
+  <form
+    #eventForm="ngForm"
+    (ngSubmit)="onSubmitEvent(eventForm)"
+    *ngIf="eventFormVisible"
+  >
+    <label for="date">Date</label>
+    <input mat-input type="date" value="date" name="date" ngModel />
+    <label for="event">Event Title</label>
+    <input mat-inputtype="text" value="event" name="event" ngModel />
+    <button type="submit" [disabled]="!eventForm.valid">Submit</button>
+  </form>
+  <div class="eventsContainer">
+    <h1>Upcoming Events</h1>
+
+    <table
+      mat-table
+      [dataSource]="dataService.upcomingEvents"
+      class="mat-elevation-z8"
+    >
+      <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef>Date</th>
+        <td mat-cell *matCellDef="let event" style="font-weight: 600">
+          {{ event.date }}
+        </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="eventName">
+        <th mat-header-cell *matHeaderCellDef>Event</th>
+        <td mat-cell *matCellDef="let event">{{ event.event }} <button>delete</button></td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="scheduleService.eventsColumns"></tr>
+      <tr
+        mat-row
+        *matRowDef="let row; columns: scheduleService.eventsColumns"
+      ></tr>
+    </table>
+  </div>
+</div>
