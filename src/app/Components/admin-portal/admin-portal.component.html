@@ -1,0 +1,13 @@
+<button (click)="eventFormVisible = !eventFormVisible">Edit Event</button>
+
+<form
+  #eventForm="ngForm"
+  (ngSubmit)="onSubmitEvent(eventForm)"
+  *ngIf="eventFormVisible"
+>
+  <label for="date">Date</label>
+  <input mat-input type="text" value="date" name="date" ngModel />
+  <label for="event">Event Title</label>
+  <input mat-inputtype="text" value="event" name="event" ngModel />
+  <button type="submit" [disabled]="!eventForm.valid">Submit</button>
+</form>

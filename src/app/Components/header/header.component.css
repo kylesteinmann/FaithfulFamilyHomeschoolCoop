@@ -1,21 +1,56 @@
-mat-toolbar{
-  background-color: turquoise;
-  display: flex;
-  justify-content:space-between;
-  align-items: center;
-  padding:50px 20px 50px 20px;
-  width: 100%;
+@media (min-width: 1800px) {
+  .headerContainer {
+    background-color: turquoise;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px 30px 10px;
+    flex-wrap: wrap;
+    flex-grow: inherit;
+    width: auto;
+    height: auto;
+  }
+  .headerButtons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  button {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    font-size: xx-large;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+  }
 }
-.headerButtons {
-  display: flex;
+@media (max-width: 1800px) {
+  .headerContainer {
+    background-color: turquoise;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px 30px 10px;
+    flex-wrap: wrap;
+    flex-grow: inherit;
+    width: auto;
+    height: auto;
+  }
 
-}
-button{
-  display:flex;
-  background-color:transparent;
-  border: none;
-  font-size:larger;
-  color:white;
-  padding:20px;
-  cursor: pointer;
+  .headerButtons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  button {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    font-size: xx-large;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+  }
 }

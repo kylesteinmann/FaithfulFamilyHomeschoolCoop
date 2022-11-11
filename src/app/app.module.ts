@@ -4,6 +4,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTableModule } from '@angular/material/table';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
@@ -13,6 +16,7 @@ import { MeetTheBoardComponent } from './Components/meet-the-board/meet-the-boar
 import { ScheduleAndClassesComponent } from './Components/schedule-and-classes/schedule-and-classes.component';
 import { ImportantInformationComponent } from './Components/important-information/important-information.component';
 import { SignUpAndPaymentComponent } from './Components/sign-up-and-payment/sign-up-and-payment.component';
+import { AdminPortalComponent } from './Components/admin-portal/admin-portal.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +28,7 @@ import { SignUpAndPaymentComponent } from './Components/sign-up-and-payment/sign
     ScheduleAndClassesComponent,
     ImportantInformationComponent,
     SignUpAndPaymentComponent,
+    AdminPortalComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +36,8 @@ import { SignUpAndPaymentComponent } from './Components/sign-up-and-payment/sign
     BrowserAnimationsModule,
     MatToolbarModule,
     MatTableModule,
+    FormsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],
