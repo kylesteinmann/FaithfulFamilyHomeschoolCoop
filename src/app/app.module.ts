@@ -5,7 +5,7 @@ import { MatTableModule } from '@angular/material/table';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
