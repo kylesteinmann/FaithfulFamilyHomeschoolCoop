@@ -16,9 +16,9 @@ export class AdminPortalComponent implements OnInit {
   constructor(public dataService:DataService, public formsService:FormsService, public scheduleService:ScheduleService, private http:HttpClient) { }
 
   onSubmitEvent(eventForm:NgForm) {
-    // if (!eventForm.valid) {
-    //   return;
-    // }
+    if (!eventForm.valid) {
+      return;
+    }
     const date = eventForm.value.date;
     const event = eventForm.value.event;
     const postData = {"date":date, "event":event}
