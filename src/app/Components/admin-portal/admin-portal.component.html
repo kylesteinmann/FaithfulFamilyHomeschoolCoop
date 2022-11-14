@@ -111,7 +111,7 @@
     <ng-container matColumnDef="eventName">
       <th mat-header-cell *matHeaderCellDef></th>
       <td mat-cell *matCellDef="let class">{{ class.description }}
-        <button mat-raised-button (click)="dataService.deleteClass(class.id)">
+        <button class="deleteButton" mat-raised-button (click)="dataService.deleteClass(class.id)">
           delete
         </button>
       </td>
