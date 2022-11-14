@@ -24,8 +24,8 @@
         <td mat-cell *matCellDef="let event">{{ event.event }}</td>
       </ng-container>
 
-      <tr mat-header-row *matHeaderRowDef="eventsColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: eventsColumns"></tr>
+      <tr mat-header-row *matHeaderRowDef="scheduleService.eventsColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: scheduleService.eventsColumns"></tr>
     </table>
   </div>
 
@@ -42,7 +42,7 @@
 
       <!-- Position Column -->
 
-      <ng-container matColumnDef="date">
+      <ng-container matColumnDef="className">
         <th mat-header-cell *matHeaderCellDef>Classes</th>
         <td mat-cell *matCellDef="let class" style="font-weight: 600">
           {{ class.className }}
@@ -50,13 +50,13 @@
       </ng-container>
 
       <!-- Name Column -->
-      <ng-container matColumnDef="eventName">
+      <ng-container matColumnDef="description">
         <th mat-header-cell *matHeaderCellDef></th>
-        <td mat-cell *matCellDef="let class">{{ class.classDescription }}</td>
+        <td mat-cell *matCellDef="let class">{{ class.description }}</td>
       </ng-container>
 
-      <tr mat-header-row *matHeaderRowDef="eventsColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: eventsColumns"></tr>
+      <tr mat-header-row *matHeaderRowDef="scheduleService.classesColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: scheduleService.classesColumns"></tr>
     </table>
   </div>
 </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { DataService } from 'src/app/Services/data.service';
+import { ScheduleService } from 'src/app/Services/schedule.service';
 
 @Component({
   selector: 'app-schedule-and-classes',
@@ -10,9 +11,12 @@ import { DataService } from 'src/app/Services/data.service';
 export class ScheduleAndClassesComponent implements OnInit {
 
 
-  eventsColumns: string[] = ['date', 'eventName'];
 
-  constructor(public dataService:DataService) {}
 
-  ngOnInit(): void {}
+  constructor(public dataService:DataService, public scheduleService:ScheduleService) {}
+
+  ngOnInit() {
+    this.dataService.fetchEventsData()
+    this.dataService.fetchClassesData()
+  }
 }

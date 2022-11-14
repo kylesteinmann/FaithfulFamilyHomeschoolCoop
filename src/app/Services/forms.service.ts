@@ -1,23 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
+import { NgForm, UntypedFormBuilder } from '@angular/forms';
 import { DataService } from './data.service';
-import { DatePipe } from '@angular/common';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FormsService {
-  constructor(
-    public dataService: DataService,
-    public http: HttpClient
-  ) {}
+  constructor(public dataService: DataService, public http: HttpClient) {}
 
   onSubmitEvent(eventForm: NgForm) {
-    const datepipe: DatePipe = new DatePipe('en-US');
-
-    const date = datepipe.transform(eventForm.value.date, 'MM/dd/YYYY');
+    const date = eventForm.value.date;
     const event = eventForm.value.event;
     const postData = { date: date, event: event };
 
@@ -26,11 +19,26 @@ export class FormsService {
         'https://faith-family-homeschool-co-op-default-rtdb.firebaseio.com/events.json',
         postData
       )
-      .subscribe();
+      .subscribe(() => {
+        this.dataService.fetchEventsData();
+        eventForm.reset();
 
-    this.dataService.fetchEventsData();
-    location.reload();
+      });
+  }
 
-    console.log(postData);
+  onSubmitClass(classForm: NgForm) {
+    const className = classForm.value.class;
+    const description = classForm.value.description;
+    const postData = { className: className, description: description };
+
+    this.http
+      .post(
+        'https://faith-family-homeschool-co-op-default-rtdb.firebaseio.com/classes.json',
+        postData
+      )
+      .subscribe(() => {
+        this.dataService.fetchClassesData()
+        classForm.reset();
+      });
   }
 }

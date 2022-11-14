@@ -2,7 +2,6 @@ table {
   width: 100%;
   max-width: 450px;
   min-width: 400px;
-
 }
 h1 {
   padding: 0;
@@ -16,7 +15,7 @@ h1 {
   align-items: center;
   margin: 70px;
 }
-th{
+th {
   background-color: turquoise;
   color: white;
   font-size: x-large;
@@ -32,4 +31,31 @@ th{
   flex-direction: column;
   align-items: center;
   margin: 70px;
+}
+.sectionButtonConatiner {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+button {
+  background-color: turquoise;
+  color: white;
+  margin: 10px;
+}
+.input {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.submitButton {
+  height: 36px;
 }
