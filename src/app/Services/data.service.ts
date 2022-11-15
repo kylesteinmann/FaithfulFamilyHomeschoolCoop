@@ -67,16 +67,13 @@ export class DataService {
         map((responseData) => {
           const classesArray = [];
           for (const key in responseData) {
-            if (responseData.hasOwnProperty(key)) {
-              classesArray.push({ ...responseData[key], id: key });
-            }
+            classesArray.push({ ...responseData[key], id: key });
           }
           return classesArray;
         })
       )
       .subscribe((classes) => {
         this.classesOffered = classes;
-
       });
   }
 
@@ -91,6 +88,4 @@ export class DataService {
         this.fetchClassesData();
       });
   }
-
 }
-
