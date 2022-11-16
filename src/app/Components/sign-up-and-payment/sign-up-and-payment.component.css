@@ -1,0 +1,26 @@
+mat-vertical-stepper {
+  border:solid turquoise 2px;
+  border-radius: 50px;
+  width:50%;
+  box-shadow: 3px 3px 3px;
+}
+.container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin:20px;
+  color:lightslategray;
+}
+
+form{
+  color:turquoise;
+
+}
+.example-input-wrapper {
+  margin-bottom: 16px;
+}
+
+label {
+  margin-right: 4px;
+}
+

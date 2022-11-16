@@ -6,9 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
-
+import { MatStepperModule } from '@angular/material/stepper';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
@@ -19,7 +20,6 @@ import { ScheduleAndClassesComponent } from './Components/schedule-and-classes/s
 import { ImportantInformationComponent } from './Components/important-information/important-information.component';
 import { SignUpAndPaymentComponent } from './Components/sign-up-and-payment/sign-up-and-payment.component';
 import { AdminPortalComponent } from './Components/admin-portal/admin-portal.component';
-
 
 @NgModule({
   declarations: [
@@ -42,7 +42,9 @@ import { AdminPortalComponent } from './Components/admin-portal/admin-portal.com
     FormsModule,
     MatInputModule,
     HttpClientModule,
-    MatButtonModule
+    MatButtonModule,
+    MatStepperModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
