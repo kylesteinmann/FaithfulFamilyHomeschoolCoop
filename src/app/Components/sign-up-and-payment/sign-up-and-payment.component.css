@@ -1,8 +1,8 @@
 mat-vertical-stepper {
-  border:solid turquoise 2px;
-  border-radius: 50px;
+  border:solid turquoise 1px;
+  /* border-radius: 50px; */
   width:50%;
-  box-shadow: 3px 3px 3px;
+  box-shadow: 5px 5px 5px;
 }
 .container{
   display:flex;
@@ -24,3 +24,8 @@ label {
   margin-right: 4px;
 }
 
+.streetAddress{
+  width:100px;
+}
+mat-form-field {
+  margin: 10px;}

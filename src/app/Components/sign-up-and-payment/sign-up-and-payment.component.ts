@@ -10,11 +10,36 @@ import {FormBuilder, Validators} from '@angular/forms';
 })
 export class SignUpAndPaymentComponent implements OnInit {
 
-  firstFormGroup = this._formBuilder.group({
-    firstCtrl: ['', Validators.required],
+  parentInformation = this._formBuilder.group({
+    firstName: ['', Validators.required],
+    lastName:['',Validators.required],
+    streetAddress:['',Validators.required],
+    city:['',Validators.required],
+    state:['',Validators.required],
+    zipCode:['',Validators.required],
+    phoneNumber:['',Validators.required],
+    emailAddress:['',Validators.required]
   });
   secondFormGroup = this._formBuilder.group({
-    secondCtrl: ['', Validators.required],
+    childFirstNameOne: ['', Validators.required],
+    childLastNameOne: ['', Validators.required],
+    ageOne: ['', Validators.required],
+
+    childFirstNameTwo: ['', Validators],
+    childLastNameTwo: ['', Validators],
+    ageTwo: ['', Validators],
+
+    childFirstNameThree: ['', Validators],
+    childLastNameThree: ['', Validators],
+    ageThree: ['', Validators],
+
+    childFirstNameFour: ['', Validators],
+    childLastNameFour: ['', Validators],
+    ageFour: ['', Validators],
+
+    childFirstNameFive: ['', Validators],
+    childLastNameFive: ['', Validators],
+    ageFive: ['', Validators],
   });
   isLinear = false;
 
