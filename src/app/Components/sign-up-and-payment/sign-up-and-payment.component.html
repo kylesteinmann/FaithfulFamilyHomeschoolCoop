@@ -1,85 +1,143 @@
 <div class="container">
+
+
+  <form
+    #signupForm="ngForm"
+    (ngSubmit)="formsService.onSubmitSignupForm(signupForm)"
+  >
+  <h1>Parent's Information</h1>
+    <div class="inputSection">
+      <mat-form-field>
+        <label for="parentFirstName">First Name</label>
+        <input class="nameInput" type="text" matInput name="parentFirstName" ngModel  />
+      </mat-form-field>
+      <mat-form-field>
+        <label for="parentLastName">Last Name</label>
+        <input type="text" matInput name="parentLastName" ngModel />
+      </mat-form-field>
+    </div>
+    <div class="inputSection">
+      <mat-form-field>
+        <label for="address">Address</label>
+        <input type="text" matInput name="address" ngModel />
+      </mat-form-field>
+    </div>
+    <div class="inputSection">
+      <mat-form-field>
+        <label for="City">City</label>
+        <input type="text" matInput name="City" ngModel />
+      </mat-form-field>
+      <mat-form-field>
+        <label for="state">State</label>
+        <input type="text" matInput name="state" ngModel />
+      </mat-form-field>
+      <mat-form-field>
+        <label for="zipcode">Zipcode</label>
+        <input type="number" matInput name="zipcode" ngModel />
+      </mat-form-field>
+    </div>
+    <div class="inputSection">
+      <mat-form-field>
+        <label for="phoneNumber">Phone Number</label>
+        <input
+          type="tel"
+          matInput
+          name="phoneNumber"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          ngModel
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <label for="email">Email</label>
+        <input type="email" matInput name="email" ngModel />
+      </mat-form-field>
+    </div>
+    <h1>Child/Chidlren's Information</h1>
+
+  </form>
+</div>
+
+<!-- <div class="container">
   <mat-vertical-stepper [linear]="false" #stepper>
     <mat-step [stepControl]="parentInformation">
       <form [formGroup]="parentInformation">
-        <ng-template matStepLabel
-          >Parent/Guardians Information:</ng-template
-        >
+        <ng-template matStepLabel>Parent/Guardians Information:</ng-template>
         <div class="name">
-        <mat-form-field>
-          <input
-            matInput
-            placeholder="First Name"
-            formControlName="firstName"
-            required
-          />
-        </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="First Name"
+              formControlName="firstName"
+              required
+            />
+          </mat-form-field>
 
-        <mat-form-field >
-          <input
-            matInput
-            placeholder="Last Name"
-            formControlName="lastName"
-            required
-          />
-        </mat-form-field>
-      </div>
-      <div >
-        <mat-form-field >
-          <input class="streetAddress"
-            matInput
-            placeholder="Street Address"
-            formControlName="streetAddress"
-            required
-          />
-        </mat-form-field>
-      </div>
-      <div class="streetAddress2">
-        <mat-form-field style=>
-          <input
-            matInput
-            placeholder="City"
-            formControlName="city"
-            required />
-        </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Last Name"
+              formControlName="lastName"
+              required
+            />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Street Address"
+              formControlName="streetAddress"
+              required
+            />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="City"
+              formControlName="city"
+              required
+            />
+          </mat-form-field>
 
-        <mat-form-field >
-          <input
-            matInput
-            placeholder="State"
-            formControlName="state"
-            required
-          />
-        </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="State"
+              formControlName="state"
+              required
+            />
+          </mat-form-field>
 
-        <mat-form-field >
-          <input
-            matInput
-            placeholder="Zip Code"
-            formControlName="zipCode"
-            required
-          />
-        </mat-form-field>
-      </div>
-      <div class="contactInfo">
-        <mat-form-field >
-          <input
-            matInput
-            placeholder="Phone Number"
-            formControlName="phoneNumber"
-            required
-          />
-        </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Zip Code"
+              formControlName="zipCode"
+              required
+            />
+          </mat-form-field>
+        </div>
+        <div class="contactInfo">
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Phone Number"
+              formControlName="phoneNumber"
+              required
+            />
+          </mat-form-field>
 
-        <mat-form-field >
-          <input
-            matInput
-            placeholder="Email Address"
-            formControlName="emailAddress"
-            required
-          />
-        </mat-form-field>
-      </div>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Email Address"
+              formControlName="emailAddress"
+              required
+            />
+          </mat-form-field>
+        </div>
         <div>
           <button mat-button matStepperNext>Next</button>
         </div>
@@ -89,31 +147,114 @@
       <form [formGroup]="secondFormGroup">
         <ng-template matStepLabel>Child/Children Information</ng-template>
         <div class="childInformation">
-        <mat-form-field>
-          <input
-            matInput
-            placeholder="First Name"
-            formControlName="childFirstName"
-            required
-          />
-        </mat-form-field>
-        <mat-form-field>
-          <input
-            matInput
-            placeholder="Last Name"
-            formControlName="childLastName"
-            required
-          />
-        </mat-form-field>
-        <mat-form-field>
-          <input
-            matInput
-            placeholder="Age"
-            formControlName="age"
-            required
-          />
-        </mat-form-field>
-      </div>
+          <div>
+            <p>Child One</p>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="First Name"
+                formControlName="childFirstNameOne"
+                required
+              />
+            </mat-form-field>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Last Name"
+                formControlName="childLastNameOne"
+                required
+              />
+            </mat-form-field>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Age"
+                formControlName="ageOne"
+                required
+              />
+            </mat-form-field>
+          </div>
+          <div>
+            <p>Child Two</p>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="First Name"
+                formControlName="childFirstNameTwo"
+              />
+            </mat-form-field>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Last Name"
+                formControlName="childLastNameTwo"
+              />
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Age" formControlName="ageTwo" />
+            </mat-form-field>
+          </div>
+          <div>
+            <p>Child Three</p>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="First Name"
+                formControlName="childFirstNameThree"
+              />
+            </mat-form-field>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Last Name"
+                formControlName="childLastNameThree"
+              />
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Age" formControlName="ageThree" />
+            </mat-form-field>
+          </div>
+          <div>
+            <p>Child Four</p>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="First Name"
+                formControlName="childFirstNameFour"
+              />
+            </mat-form-field>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Last Name"
+                formControlName="childLastNameFour"
+              />
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Age" formControlName="ageFour" />
+            </mat-form-field>
+          </div>
+          <div>
+            <p>Child Five</p>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="First Name"
+                formControlName="childFirstNameFive"
+              />
+            </mat-form-field>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Last Name"
+                formControlName="childLastNameFive"
+              />
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Age" formControlName="ageFive" />
+            </mat-form-field>
+          </div>
+        </div>
         <div>
           <button mat-button matStepperPrevious>Back</button>
           <button mat-button matStepperNext>Next</button>
@@ -124,9 +265,8 @@
       <ng-template matStepLabel>Done</ng-template>
       You are now done.
       <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button (click)="stepper.reset()">Reset</button>
+        <button type="submit" matStepperPrevious>Submit</button>
       </div>
     </mat-step>
   </mat-vertical-stepper>
-</div>
+</div> -->

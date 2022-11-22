@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, Validators} from '@angular/forms';
+import { FormsService } from 'src/app/Services/forms.service';
 
 
 
@@ -10,40 +11,40 @@ import {FormBuilder, Validators} from '@angular/forms';
 })
 export class SignUpAndPaymentComponent implements OnInit {
 
-  parentInformation = this._formBuilder.group({
-    firstName: ['', Validators.required],
-    lastName:['',Validators.required],
-    streetAddress:['',Validators.required],
-    city:['',Validators.required],
-    state:['',Validators.required],
-    zipCode:['',Validators.required],
-    phoneNumber:['',Validators.required],
-    emailAddress:['',Validators.required]
-  });
-  secondFormGroup = this._formBuilder.group({
-    childFirstNameOne: ['', Validators.required],
-    childLastNameOne: ['', Validators.required],
-    ageOne: ['', Validators.required],
+  // parentInformation = this._formBuilder.group({
+  //   firstName: ['', Validators.required],
+  //   lastName:['',Validators.required],
+  //   streetAddress:['',Validators.required],
+  //   city:['',Validators.required],
+  //   state:['',Validators.required],
+  //   zipCode:['',Validators.required],
+  //   phoneNumber:['',Validators.required],
+  //   emailAddress:['',Validators.required]
+  // });
+  // secondFormGroup = this._formBuilder.group({
+  //   childFirstNameOne: ['', Validators.required],
+  //   childLastNameOne: ['', Validators.required],
+  //   ageOne: ['', Validators.required],
 
-    childFirstNameTwo: ['', Validators],
-    childLastNameTwo: ['', Validators],
-    ageTwo: ['', Validators],
+  //   childFirstNameTwo: [''],
+  //   childLastNameTwo: [''],
+  //   ageTwo: [''],
 
-    childFirstNameThree: ['', Validators],
-    childLastNameThree: ['', Validators],
-    ageThree: ['', Validators],
+  //   childFirstNameThree: ['' ],
+  //   childLastNameThree: ['' ],
+  //   ageThree: ['' ],
 
-    childFirstNameFour: ['', Validators],
-    childLastNameFour: ['', Validators],
-    ageFour: ['', Validators],
+  //   childFirstNameFour: [''],
+  //   childLastNameFour: ['' ],
+  //   ageFour: ['' ],
 
-    childFirstNameFive: ['', Validators],
-    childLastNameFive: ['', Validators],
-    ageFive: ['', Validators],
-  });
-  isLinear = false;
+  //   childFirstNameFive: ['' ],
+  //   childLastNameFive: ['' ],
+  //   ageFive: ['']
+  // });
+  // isLinear = false;
 
-  constructor(private _formBuilder: FormBuilder) { }
+  constructor(private _formBuilder: FormBuilder, public formsService:FormsService) { }
 
   ngOnInit(): void {
   }

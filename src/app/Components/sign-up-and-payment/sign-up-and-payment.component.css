@@ -1,31 +1,36 @@
-mat-vertical-stepper {
-  border:solid turquoise 1px;
-  /* border-radius: 50px; */
-  width:50%;
+/* mat-vertical-stepper {
+  border: solid turquoise 1px;
+  /* border-radius: 50px;
+  width: 50%;
   box-shadow: 5px 5px 5px;
-}
-.container{
-  display:flex;
+} */
+.container {
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin:20px;
-  color:lightslategray;
+  margin: 20px 0;
+  color: lightslategray;
+  width: 100vw;
+  flex-direction: column;
 }
 
-form{
-  color:turquoise;
-
+form {
+  color: turquoise;
 }
-.example-input-wrapper {
+/* .example-input-wrapper {
   margin-bottom: 16px;
-}
+} */
 
-label {
-  margin-right: 4px;
-}
-
-.streetAddress{
-  width:100px;
-}
 mat-form-field {
-  margin: 10px;}
+  margin: 10px;
+  width: 100%;
+}
+
+.inputSection {
+  display: flex;
+  width: auto;
+}
+h1 {
+  color: lightslategray;
+  font-weight: 500;
+}

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { NgForm, UntypedFormBuilder } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { DataService } from './data.service';
 
 @Injectable({
@@ -22,7 +22,6 @@ export class FormsService {
       .subscribe(() => {
         this.dataService.fetchEventsData();
         eventForm.reset();
-
       });
   }
 
@@ -37,8 +36,13 @@ export class FormsService {
         postData
       )
       .subscribe(() => {
-        this.dataService.fetchClassesData()
+        this.dataService.fetchClassesData();
         classForm.reset();
       });
+  }
+
+  onSubmitSignupForm(formData: NgForm) {
+
+
   }
 }
