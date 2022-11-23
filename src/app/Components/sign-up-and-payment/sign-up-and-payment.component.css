@@ -1,9 +1,3 @@
-/* mat-vertical-stepper {
-  border: solid turquoise 1px;
-  /* border-radius: 50px;
-  width: 50%;
-  box-shadow: 5px 5px 5px;
-} */
 .container {
   display: flex;
   justify-content: center;
@@ -15,11 +9,8 @@
 }
 
 form {
-  color: turquoise;
+  color: white;
 }
-/* .example-input-wrapper {
-  margin-bottom: 16px;
-} */
 
 mat-form-field {
   margin: 10px;
@@ -29,8 +20,35 @@ mat-form-field {
 .inputSection {
   display: flex;
   width: auto;
+  margin:5px 0 5px 0;
+  background-color: turquoise;
+  border-radius: 10px;
+  padding:5px;
 }
+
 h1 {
   color: lightslategray;
   font-weight: 500;
+  margin:20px 0 0 0;
+}
+button {
+  color:white;
+  background-color: turquoise;
+}
+.submitButton {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 0 0;
+}
+
+hr{
+  background-color:turquoise;
+  border:none;
+  height:1px;
+  margin:10px 0 10px 0;
+  width:75%;
+}
+.break {
+  display: flex;
+  justify-content: center;
 }

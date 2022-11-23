@@ -15,6 +15,8 @@ export class DataService {
 
   upcomingEvents: Event[] = [];
 
+  signUps:any[] = [];
+
   constructor(private http: HttpClient) {}
 
   public fetchEventsData() {
@@ -86,6 +88,26 @@ export class DataService {
       )
       .subscribe(() => {
         this.fetchClassesData();
+      });
+  }
+
+  public fetchSignUpsData() {
+    this.http
+      .get(
+        'https://faith-family-homeschool-co-op-default-rtdb.firebaseio.com/signed-up.json'
+      )
+      .pipe(
+        map((responseData:any) => {
+          const signUpsArray = [];
+          for (const key in responseData) {
+            signUpsArray.push({ ...responseData[key], id: key });
+          }
+          return signUpsArray;
+        })
+      )
+      .subscribe((signUpsData) => {
+        this.signUps = signUpsData;
+        console.log(this.signUps)
       });
   }
 }

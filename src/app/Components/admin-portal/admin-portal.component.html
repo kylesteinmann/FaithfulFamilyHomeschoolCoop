@@ -1,9 +1,33 @@
 <div class="sectionButtonConatiner">
-  <button mat-raised-button (click)="eventFormVisible = !eventFormVisible; classFormVisible = false ">
+  <button
+    mat-raised-button
+    (click)="
+      eventFormVisible = !eventFormVisible;
+      classFormVisible = false;
+      signUpsVisible = false
+    "
+  >
     Add and Remove Events
   </button>
-  <button mat-raised-button (click)="classFormVisible = !classFormVisible; eventFormVisible = false">
+  <button
+    mat-raised-button
+    (click)="
+      classFormVisible = !classFormVisible;
+      eventFormVisible = false;
+      signUpsVisible = false
+    "
+  >
     Add and Remove Classes
+  </button>
+  <button
+    mat-raised-button
+    (click)="
+      signUpsVisible = !signUpsVisible;
+      eventFormVisible = false;
+      classFormVisible = false
+    "
+  >
+    Sign-ups List
   </button>
 </div>
 
@@ -110,12 +134,16 @@
     <!-- Name Column -->
     <ng-container matColumnDef="eventName">
       <th mat-header-cell *matHeaderCellDef></th>
-      <td mat-cell *matCellDef="let class">{{ class.description }}
-        <button class="deleteButton" mat-raised-button (click)="dataService.deleteClass(class.id)">
+      <td mat-cell *matCellDef="let class">
+        {{ class.description }}
+        <button
+          class="deleteButton"
+          mat-raised-button
+          (click)="dataService.deleteClass(class.id)"
+        >
           delete
         </button>
       </td>
-
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="scheduleService.eventsColumns"></tr>
@@ -126,3 +154,99 @@
   </table>
 </div>
 
+<div class="signUpsContainer" *ngIf="signUpsVisible">
+  <div class="entryContainer" *ngFor="let item of dataService.signUps">
+    <h2 style="width: 100%">
+      Parent/Guardian:
+      {{ " " + item.parentFirstName + " " + item.parentLastName }}
+    </h2>
+
+    <div class="contactInformation">
+      <p>{{ item.address }}</p>
+      <p>{{ item.city }}, {{ item.state }} {{ item.zipCode }}</p>
+    </div>
+    <div class="contactInformation">
+      <p>{{ item.phoneNumber }}</p>
+      <p>{{ item.email }}</p>
+    </div>
+    <p style="width: 100%; margin-top: 5px">
+      Classes interested in teaching/helping: {{ item.classesInterestedIn }}
+    </p>
+   <h2>Children</h2>
+    <div class="childerContainer">
+
+      <div >
+        <p *ngIf="item.childFirstNameOne" class="childName">
+          {{
+            item.childFirstNameOne +
+              " " +
+              item.childLastNameOne +
+              ", " +
+              item.ageOne
+          }}
+        </p>
+        <p *ngIf="item.childFirstNameOne">
+          {{ "    -    Allergies/Health Concerns: " + item.knownAllergiesOne }}
+        </p>
+      </div>
+      <div>
+        <p *ngIf="item.childFirstNameTwo" class="childName">
+          {{
+            item.childFirstNameTwo +
+              " " +
+              item.childLastNameTwo +
+              ", " +
+              item.ageTwo
+          }}
+        </p>
+        <p *ngIf="item.childFirstNameTwo">
+          {{ "    -    Allergies/Health Concerns: " + item.knownAllergiesTwo }}
+        </p>
+      </div>
+      <div>
+        <p *ngIf="item.childFirstNameThree" class="childName">
+          {{
+            item.childFirstNameThree +
+              " " +
+              item.childLastNameThree +
+              ", " +
+              item.ageThree
+          }}
+        </p>
+        <p *ngIf="item.childFirstNameThree">
+          {{
+            "    -    Allergies/Health Concerns: " + item.knownAllergiesThree
+          }}
+        </p>
+      </div>
+      <div>
+        <p *ngIf="item.childFirstNameFour" class="childName">
+          {{
+            item.childFirstNameFour +
+              " " +
+              item.childLastNameFour +
+              ", " +
+              item.ageFour
+          }}
+        </p>
+        <p *ngIf="item.childFirstNameFour">
+          {{ "    -    Allergies/Health Concerns: " + item.knownAllergiesFour }}
+        </p>
+      </div>
+      <div>
+        <p *ngIf="item.childFirstNameFive" class="childName">
+          {{
+            item.childFirstNameFive +
+              " " +
+              item.childLastNameFive +
+              ", " +
+              item.ageFive
+          }}
+        </p>
+        <p *ngIf="item.childFirstNameFive">
+          {{ "    -    Allergies/Health Concerns: " + item.knownAllergiesFive }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

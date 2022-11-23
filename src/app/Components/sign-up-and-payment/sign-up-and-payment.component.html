@@ -1,15 +1,19 @@
 <div class="container">
-
-
   <form
     #signupForm="ngForm"
     (ngSubmit)="formsService.onSubmitSignupForm(signupForm)"
   >
-  <h1>Parent's Information</h1>
+    <h1>Parent's Information</h1>
     <div class="inputSection">
       <mat-form-field>
         <label for="parentFirstName">First Name</label>
-        <input class="nameInput" type="text" matInput name="parentFirstName" ngModel  />
+        <input
+          class="nameInput"
+          type="text"
+          matInput
+          name="parentFirstName"
+          ngModel
+        />
       </mat-form-field>
       <mat-form-field>
         <label for="parentLastName">Last Name</label>
@@ -24,16 +28,16 @@
     </div>
     <div class="inputSection">
       <mat-form-field>
-        <label for="City">City</label>
-        <input type="text" matInput name="City" ngModel />
+        <label for="city">City</label>
+        <input type="text" matInput name="city" ngModel />
       </mat-form-field>
       <mat-form-field>
         <label for="state">State</label>
         <input type="text" matInput name="state" ngModel />
       </mat-form-field>
       <mat-form-field>
-        <label for="zipcode">Zipcode</label>
-        <input type="number" matInput name="zipcode" ngModel />
+        <label for="zipCode">Zipcode</label>
+        <input type="number" matInput name="zipCode" ngModel />
       </mat-form-field>
     </div>
     <div class="inputSection">
@@ -52,8 +56,135 @@
         <input type="email" matInput name="email" ngModel />
       </mat-form-field>
     </div>
+    <div class="inputSection">
+      <mat-form-field>
+        <label for="classesInterestedIn"
+          >What subjects would you be interested in teaching or helping
+          with?</label
+        >
+        <input type="textarea" matInput name="classesInterestedIn" ngModel />
+      </mat-form-field>
+    </div>
     <h1>Child/Chidlren's Information</h1>
 
+    <div class="inputSection">
+      <mat-form-field>
+        <label for="childFirstNameOne">First Name</label>
+        <input type="text" matInput name="childFirstNameOne" ngModel />
+      </mat-form-field>
+      <mat-form-field>
+        <label for="childLastNameOne">Last Name</label>
+        <input type="text" matInput name="childLastNameOne" ngModel />
+      </mat-form-field>
+      <mat-form-field>
+        <label for="ageOne">Age</label>
+        <input type="text" matInput name="ageOne" ngModel />
+      </mat-form-field>
+    </div>
+    <div class="inputSection">
+      <mat-form-field>
+        <label for="knownAllergiesOne">Known Allergies or Health Concerns</label>
+        <input type="textarea" matInput name="knownAllergiesOne" ngModel />
+      </mat-form-field>
+    </div>
+    <div class="break">
+      <hr />
+    </div>
+    <div class="inputSection">
+      <mat-form-field>
+        <label for="childFirstNameTwo">First Name</label>
+        <input type="text" matInput name="childFirstNameTwo" ngModel />
+      </mat-form-field>
+      <mat-form-field>
+        <label for="childLastNameTwo">Last Name</label>
+        <input type="text" matInput name="childLastNameTwo" ngModel />
+      </mat-form-field>
+      <mat-form-field>
+        <label for="ageTwo">Age</label>
+        <input type="text" matInput name="ageTwo" ngModel />
+      </mat-form-field>
+    </div>
+    <div class="inputSection">
+      <mat-form-field>
+        <label for="knownAllergiesTwo">Known Allergies or Health Concerns</label>
+        <input type="textarea" matInput name="knownAllergiesTwo" ngModel />
+      </mat-form-field>
+    </div>
+    <div class="break">
+      <hr />
+    </div>
+    <div class="inputSection">
+      <mat-form-field>
+        <label for="childFirstNameThree">First Name</label>
+        <input type="text" matInput name="childFirstNameThree" ngModel />
+      </mat-form-field>
+      <mat-form-field>
+        <label for="childLastNameThree">Last Name</label>
+        <input type="text" matInput name="childLastNameThree" ngModel />
+      </mat-form-field>
+      <mat-form-field>
+        <label for="ageThree">Age</label>
+        <input type="text" matInput name="ageThree" ngModel />
+      </mat-form-field>
+    </div>
+    <div class="inputSection">
+      <mat-form-field>
+        <label for="knownAllergiesThree">Known Allergies or Health Concerns</label>
+        <input type="textarea" matInput name="knownAllergiesThree" ngModel />
+      </mat-form-field>
+    </div>
+    <div class="break">
+      <hr />
+    </div>
+    <div class="inputSection">
+      <mat-form-field>
+        <label for="childFirstNameFour">First Name</label>
+        <input type="text" matInput name="childFirstNameFour" ngModel />
+      </mat-form-field>
+      <mat-form-field>
+        <label for="childLastNameFour">Last Name</label>
+        <input type="text" matInput name="childLastNameFour" ngModel />
+      </mat-form-field>
+      <mat-form-field>
+        <label for="ageFour">Age</label>
+        <input type="text" matInput name="ageFour" ngModel />
+      </mat-form-field>
+    </div>
+    <div class="inputSection">
+      <mat-form-field>
+        <label for="knownAllergiesFour">Known Allergies or Health Concerns</label>
+        <input type="textarea" matInput name="knownAllergiesFour" ngModel />
+      </mat-form-field>
+    </div>
+    <div class="break">
+      <hr />
+    </div>
+    <div class="inputSection">
+      <mat-form-field>
+        <label for="childFirstNameFive">First Name</label>
+        <input type="text" matInput name="childFirstNameFive" ngModel />
+      </mat-form-field>
+      <mat-form-field>
+        <label for="childLastNameFive">Last Name</label>
+        <input type="text" matInput name="childLastNameFive" ngModel />
+      </mat-form-field>
+      <mat-form-field>
+        <label for="ageFive">Age</label>
+        <input type="text" matInput name="ageFive" ngModel />
+      </mat-form-field>
+    </div>
+    <div class="inputSection">
+      <mat-form-field>
+        <label for="knownAllergiesFive">Known Allergies or Health Concerns</label>
+        <input type="textarea" matInput name="knownAllergiesFive" ngModel />
+      </mat-form-field>
+    </div>
+    <div class="break">
+      <hr />
+    </div>
+    <div class="submitButton">
+      <button mat-raised-button type="submit">Submit Form</button>
+    </div>
   </form>
 </div>
 

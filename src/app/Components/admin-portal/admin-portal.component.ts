@@ -11,6 +11,7 @@ import { ScheduleService } from 'src/app/Services/schedule.service';
 export class AdminPortalComponent implements OnInit {
   eventFormVisible = false;
   classFormVisible = false;
+  signUpsVisible = false;
 
   constructor(
     public dataService: DataService,
@@ -21,5 +22,6 @@ export class AdminPortalComponent implements OnInit {
   ngOnInit() {
     this.dataService.fetchEventsData();
     this.dataService.fetchClassesData();
+    this.dataService.fetchSignUpsData()
   }
 }

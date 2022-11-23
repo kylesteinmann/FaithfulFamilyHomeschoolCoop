@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, Validators} from '@angular/forms';
+import { DataService } from 'src/app/Services/data.service';
 import { FormsService } from 'src/app/Services/forms.service';
 
 
@@ -44,9 +45,10 @@ export class SignUpAndPaymentComponent implements OnInit {
   // });
   // isLinear = false;
 
-  constructor(private _formBuilder: FormBuilder, public formsService:FormsService) { }
+  constructor(private dataService:DataService, public formsService:FormsService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.dataService.fetchSignUpsData()
   }
 
 }
