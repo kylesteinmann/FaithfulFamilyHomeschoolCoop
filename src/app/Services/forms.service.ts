@@ -94,19 +94,21 @@ export class FormsService {
       childFirstNameTwo: childFirstNameTwo,
       childFirstNameOne: childFirstNameOne,
       childLastNameOne: childLastNameOne,
-      childLastNameTwo:childLastNameTwo,
-      childLastNameThree:childLastNameThree,
-      childLastNameFour:childLastNameFour,
-      childLastNameFive:childLastNameFive,
-      knownAllergiesOne:knownAllergiesOne,
-      knownAllergiesTwo:knownAllergiesTwo,
-      knownAllergiesThree:knownAllergiesThree,
-      knownAllergiesFour:knownAllergiesFour,
-      knownAllergiesFive:knownAllergiesFive,
+      childLastNameTwo: childLastNameTwo,
+      childLastNameThree: childLastNameThree,
+      childLastNameFour: childLastNameFour,
+      childLastNameFive: childLastNameFive,
+      knownAllergiesOne: knownAllergiesOne,
+      knownAllergiesTwo: knownAllergiesTwo,
+      knownAllergiesThree: knownAllergiesThree,
+      knownAllergiesFour: knownAllergiesFour,
+      knownAllergiesFive: knownAllergiesFive,
     };
-    this.http.post(
-      'https://faith-family-homeschool-co-op-default-rtdb.firebaseio.com/signed-up.json',
-      postData
-    ).subscribe();
+    this.http
+      .post(
+        'https://faith-family-homeschool-co-op-default-rtdb.firebaseio.com/signed-up.json',
+        postData
+      )
+      .subscribe();
   }
 }

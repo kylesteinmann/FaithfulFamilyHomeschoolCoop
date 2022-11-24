@@ -25,7 +25,6 @@ th {
   justify-content: center;
   flex-wrap: wrap;
 }
-
 .classesContainer {
   display: flex;
   flex-direction: column;
@@ -37,7 +36,6 @@ th {
   justify-content: center;
   margin: 20px;
 }
-
 button {
   background-color: turquoise;
   color: white;
@@ -48,7 +46,6 @@ button {
   display: flex;
   flex-direction: column;
 }
-
 .formContainer {
   display: flex;
   flex-direction: row;
@@ -84,7 +81,6 @@ p{
 .childName{
   font-weight: 500;
 }
-
 h2 {
   padding:0;
   margin:0 0 0 10px;
