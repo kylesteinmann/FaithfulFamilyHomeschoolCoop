@@ -10,7 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatStepperModule } from '@angular/material/stepper';
 import { ReactiveFormsModule } from '@angular/forms';
-import  {  PdfViewerModule  }  from  'ng2-pdf-viewer';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
