@@ -10,7 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatStepperModule } from '@angular/material/stepper';
 import { ReactiveFormsModule } from '@angular/forms';
-import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 import { MatIconModule } from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 
@@ -50,7 +50,7 @@ import { AdminPortalComponent } from './Components/admin-portal/admin-portal.com
     MatButtonModule,
     MatStepperModule,
     ReactiveFormsModule,
-    PdfViewerModule,
+
     MatIconModule,
     MatMenuModule,
   ],
