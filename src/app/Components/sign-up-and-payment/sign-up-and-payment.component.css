@@ -9,7 +9,7 @@
 }
 
 form {
-  color: white;
+  color: lightslategray;
 }
 
 mat-form-field {
@@ -18,13 +18,14 @@ mat-form-field {
 }
 
 .inputSection {
+  flex-wrap: wrap;
   display: flex;
   width: auto;
   margin:5px 0 5px 0;
-  background-color: turquoise;
+  /* background-color: turquoise;
   border-radius: 10px;
   padding:5px;
-  box-shadow: 2px 2px 5px lightslategray
+  box-shadow: 2px 2px 5px lightslategray */
 }
 
 h1 {

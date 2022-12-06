@@ -9,6 +9,8 @@ import { Classes } from 'src/app/Models/classes';
   providedIn: 'root',
 })
 export class DataService {
+  hamburgerMenu = false
+
   datepipe = new DatePipe('en-US');
 
   classesOffered: Classes[] = [];

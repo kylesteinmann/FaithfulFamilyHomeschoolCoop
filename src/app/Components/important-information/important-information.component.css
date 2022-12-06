@@ -1,0 +1,11 @@
+.buttonContainer, .pdfContainer{
+display:flex;
+justify-content: center;
+
+margin:20px;
+
+}
+button {
+  margin:10px;
+}
+

@@ -1,1 +1,11 @@
-<pdf-viewer [src]="pdfSrc" width="500px">Test</pdf-viewer>
+<div class="buttonContainer">
+  <button mat-raised-button style="color:white; background-color:turquoise;" (click)="pdfSrc='https://firebasestorage.googleapis.com/v0/b/faith-family-homeschool-co-op.appspot.com/o/FFHC%20Handbook.pdf?alt=media&token=c2ce22a7-0b29-49d4-a189-a815f4f56d2e'">FFHC Handbook</button>
+  <button mat-raised-button style="color:white; background-color:turquoise;" (click)="pdfSrc='https://firebasestorage.googleapis.com/v0/b/faith-family-homeschool-co-op.appspot.com/o/Standards%20of%20Moral%20Conduct.pdf?alt=media&token=6cd18442-8a8a-4900-a2e2-794f5d88f209'">Standards of Moral Conduct</button>
+</div>
+<div class="pdfContainer">
+<iframe
+  [src]="cleanUrl()"
+  style="width: 80vw; height: 100vh"
+  frameborder="0"
+></iframe>
+</div>
