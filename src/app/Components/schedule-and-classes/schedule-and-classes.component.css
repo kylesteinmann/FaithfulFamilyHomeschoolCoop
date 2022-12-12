@@ -4,11 +4,10 @@ table {
 }
 
 .eventsContainer,.classesContainer {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column; */
   margin:20px;
 }
 th {
@@ -18,7 +17,7 @@ th {
 .container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   margin:0
 
