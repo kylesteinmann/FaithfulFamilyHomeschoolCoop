@@ -1,0 +1,7 @@
+<form #authForm="ngForm" (ngSubmit) = "onSubmitAuthForm(authForm)">
+    <label for="email">Email</label>
+    <input matInput type="email" ngModel name="email" required email>
+    <label for="password">Password</label>
+    <input type="password" ngModel name="password" required minlength="6">
+    <button type="submit" [disabled]="!authForm.valid">Submit</button>
+</form>

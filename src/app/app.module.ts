@@ -25,6 +25,7 @@ import { ScheduleAndClassesComponent } from './Components/schedule-and-classes/s
 import { ImportantInformationComponent } from './Components/important-information/important-information.component';
 import { SignUpAndPaymentComponent } from './Components/sign-up-and-payment/sign-up-and-payment.component';
 import { AdminPortalComponent } from './Components/admin-portal/admin-portal.component';
+import { AuthComponent } from './Components/auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AdminPortalComponent } from './Components/admin-portal/admin-portal.com
     ImportantInformationComponent,
     SignUpAndPaymentComponent,
     AdminPortalComponent,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
